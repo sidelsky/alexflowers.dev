@@ -1,7 +1,7 @@
 {
-  "name": "wp-gulp-starter",
+  "name": "alex-flowers",
   "version": "1.0.0",
-  "description": "wp-gulp-starter",
+  "description": "alex-flowers",
   "main": "gulpfile.js",
   "browser": {
     "skrollr": "./bower_components/skrollr/src/skrollr.js",
@@ -63,7 +63,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+###GITREPO###"
+    "url": "https://github.com/sidelsky/alexflowers.dev.git"
   },
   "author": "Errol Sidelsky",
   "license": "ISC",

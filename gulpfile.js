@@ -1,6 +1,6 @@
 //Directories
-var vhost         = 'http://wp-gulp-starter.dev/',
-    theme         = 'gulp-starter',
+var vhost         = 'http://alexflowers.dev/',
+    theme         = 'alex-flowers',
     root          = './public',
     src           = './src',
     dest          = root + '/wp-content/themes/' + theme + '/assets/build',

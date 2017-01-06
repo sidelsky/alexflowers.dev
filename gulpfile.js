@@ -1,5 +1,5 @@
 //Directories
-var vhost         = 'http://alexflowers.dev/',
+var vhost         = 'http://alexflowers.dev',
     theme         = 'alex-flowers',
     root          = './public',
     src           = './src',

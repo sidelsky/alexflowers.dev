@@ -1,0 +1,14 @@
+/*------------------------------------*\
+    FONT FAMILIES
+\*------------------------------------*/
+$font-name: 'SharpSans';
+$file-path: 'fonts/#{$font-name}/';
+@include web-font('#{$font-name}-No1-Light', '#{$file-path}', '#{$font-name}-No1-Light');
+@include web-font('#{$font-name}-No1-Book', '#{$file-path}', '#{$font-name}-No1-Book');
+@include web-font('#{$font-name}-No1-Semibold', '#{$file-path}', '#{$font-name}-No1-Semibold');
+@include web-font('#{$font-name}-No1-Bold', '#{$file-path}', '#{$font-name}-No1-Bold');
+
+// SharpSans-No1-Bold
+// SharpSans-No1-Book
+// SharpSans-No1-Light
+// SharpSans-No1-Semibold

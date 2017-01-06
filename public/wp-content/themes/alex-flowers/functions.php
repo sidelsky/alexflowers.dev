@@ -24,11 +24,11 @@
   require('functions/gf-js-to-footer.php');
 
   //Redirect home
-  require('functions/redirect.php');
+  //require('functions/redirect.php');
 
 
   //Custom Post Types
-  //require('functions/custom-post-types.php');
+  require('functions/custom-post-types.php');
 
   //Custom Taxonomies
   //require('functions/custom-taxonomies.php');

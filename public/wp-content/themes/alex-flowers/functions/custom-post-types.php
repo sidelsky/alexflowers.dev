@@ -8,7 +8,7 @@
 	add_action('init', 'create_post_types');
 
 	//Custom post type function
-	function create_post_type($titleSingle=false, $titlePlural=false, $menuIcon='dashicons-admin-post') {
+	function create_post_type($titleSingle=false, $titlePlural=false, $menuIcon=NULL) {
 
 		//If we've set a single and plural title
 		if ($titleSingle && $titlePlural) {
@@ -53,7 +53,7 @@
 	function create_post_types() {
 
 		//Events post type
-		create_post_type('Event', 'Events');
+		create_post_type('Portfolio', 'Portfolio', 'dashicons-star-filled');
 
 	}
 ?>

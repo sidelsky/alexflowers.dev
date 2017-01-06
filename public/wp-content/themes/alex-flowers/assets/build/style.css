@@ -1,4 +1,9 @@
 @charset "UTF-8";
+/*------------------------------------*    #Fonts
+    - Light
+    - Reqular - Base for headings
+    - Ultra - Used on large headings
+\*------------------------------------*/
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -533,6 +538,7 @@ html {
 body {
   background: #fff;
   color: #000;
+  font-family: "SharpSans-No1-Book", Helvetica, Arial, sans-serif;
   font-size: 1rem;
   font-smoothing: antialiased;
   line-height: 1.33;
@@ -764,4 +770,49 @@ a {
   .container--fill {
     padding: 0 10px;
   }
+}
+
+/*------------------------------------*    FONT FAMILIES
+\*------------------------------------*/
+@font-face {
+  font-family: "SharpSans-No1-Light";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/SharpSans/SharpSans-No1-Light.eot");
+  src: url("fonts/SharpSans/SharpSans-No1-Light.eot?#iefix") format("embedded-opentype"), url("fonts/SharpSans/SharpSans-No1-Light.woff") format("woff"), url("fonts/SharpSans/SharpSans-No1-Light.ttf") format("truetype"), url("fonts/SharpSans/SharpSans-No1-Light.svgSharpSans-No1-Light") format("svg");
+}
+
+@font-face {
+  font-family: "SharpSans-No1-Book";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/SharpSans/SharpSans-No1-Book.eot");
+  src: url("fonts/SharpSans/SharpSans-No1-Book.eot?#iefix") format("embedded-opentype"), url("fonts/SharpSans/SharpSans-No1-Book.woff") format("woff"), url("fonts/SharpSans/SharpSans-No1-Book.ttf") format("truetype"), url("fonts/SharpSans/SharpSans-No1-Book.svgSharpSans-No1-Book") format("svg");
+}
+
+@font-face {
+  font-family: "SharpSans-No1-Semibold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/SharpSans/SharpSans-No1-Semibold.eot");
+  src: url("fonts/SharpSans/SharpSans-No1-Semibold.eot?#iefix") format("embedded-opentype"), url("fonts/SharpSans/SharpSans-No1-Semibold.woff") format("woff"), url("fonts/SharpSans/SharpSans-No1-Semibold.ttf") format("truetype"), url("fonts/SharpSans/SharpSans-No1-Semibold.svgSharpSans-No1-Semibold") format("svg");
+}
+
+@font-face {
+  font-family: "SharpSans-No1-Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/SharpSans/SharpSans-No1-Bold.eot");
+  src: url("fonts/SharpSans/SharpSans-No1-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/SharpSans/SharpSans-No1-Bold.woff") format("woff"), url("fonts/SharpSans/SharpSans-No1-Bold.ttf") format("truetype"), url("fonts/SharpSans/SharpSans-No1-Bold.svgSharpSans-No1-Bold") format("svg");
+}
+
+.c-hero-video {
+  /*  making the video fullscreen  */
+  bottom: 0;
+  height: auto;
+  min-height: 100%;
+  min-width: 100%;
+  right: 0;
+  width: auto;
+  z-index: 0;
 }

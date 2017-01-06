@@ -10,6 +10,23 @@ $grey: #999;
 //Typefaces
 $arial: 'Arial', sans-serif;
 
+/*------------------------------------*\
+    #Fonts
+    - Light
+    - Reqular - Base for headings
+    - Ultra - Used on large headings
+\*------------------------------------*/
+$font-primary-light: 'SharpSans-No1-Light', Helvetica, Arial, sans-serif;
+$font-primary-book: 'SharpSans-No1-Book', Helvetica, Arial, sans-serif;
+$font-primary-semibold: 'SharpSans-No1-Semibold', Helvetica, Arial, sans-serif;
+$font-primary-bold: 'SharpSans-No1-Bold', Helvetica, Arial, sans-serif;
+
+// SharpSans-No1-Light
+// SharpSans-No1-Book
+// SharpSans-No1-Semibold
+// SharpSans-No1-Bold
+
+
 //Global
 $primary-font: $arial;
 $primary-font-color: $grey;

@@ -1,11 +1,60 @@
-.c-hero-video {
-/*  making the video fullscreen  */
-  bottom: 0;
-  height: auto;
-  min-height: 100%;
-  min-width: 100%;
-  //position: fixed;
-  right: 0;
-  width: auto;
-  z-index: 0;
+.c-hero {
+    //top: 111px;
+    background-color: $black;
+    height: calc(100vh - 111px);
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        @include vertical-align(absolute);
+        color: $white;
+        content: 'Loading video content...';
+        letter-spacing: 1px;
+        text-align: center;
+        text-transform: uppercase;
+        z-index: 0;
+    }
+
+    // Action
+    &__action {
+        position: absolute;
+        bottom: $spacing--medium;
+        z-index: 2;
+        width: 100%;
+        text-align: center;
+    }
+
+    // Down chevron icon
+    &__icon {
+        font-size: 6rem;
+        fill: $white;
+    }
+
+    // Link
+    &__link {
+        display: inline-block;
+
+        &::before {
+            color: $white;
+            content: 'See more';
+            letter-spacing: 1px;
+            text-align: center;
+            text-transform: uppercase;
+            z-index: 0;
+        }
+
+    }
+
+
+// Video
+  &__video {
+    height: calc(100vh - 111px);
+    left: 0px;
+    object-fit: cover;
+    position: absolute; /* Change position to absolute if you don't want it to take up the whole page */
+    top: 0px;
+    width: 100vw; /* Could also use width: 100%; */
+    z-index: 1;
+  }
+
 }

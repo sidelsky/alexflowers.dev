@@ -12,7 +12,7 @@
 
 		<?php wp_head(); ?>
 	</head>
-	
+
 	<body <?php body_class(); ?>>
 		<?php
 			//Include SVG Sprite
@@ -41,18 +41,23 @@
 
 				<?php endif; ?>
 
+                    <?php wp_nav_menu( array(
+              		'menu'            => 'Primary navigation',
+              		'container'       => 'nav',
+              		'container_class' => 'primary',
+              		//'container_id'    => 'menuContainer',
+              		//'menu_id'         => 'menu',
+              		//'theme_location'  => 'Primary Menu',
+              		'menu_class'      => 'p-site-nav',
+              		//'echo'            => true,
+              		//'fallback_cb'     => 'wp_page_menu',
+              		//'before'          => ,
+              		//'after'           => ,
+              		//'link_before'     => ,
+              		//'link_after'      => ,
+              		//'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+              		//'depth'           => 0,
+              		//'walker'          =>
+              		)); ?>
+
 			</header>
-
-			<nav class="site-nav">
-
-				<?php
-					//Nav Menu
-					$args = array(
-						'container'       =>	'',
-						'echo'            =>	true,
-						'items_wrap'			=>	'<ul class="site-nav__menu">%3$s</ul>'
-					);
-					wp_nav_menu($args);
-				?>
-
-			</nav>

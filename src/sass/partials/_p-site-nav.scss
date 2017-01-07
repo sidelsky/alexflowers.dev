@@ -1,0 +1,28 @@
+.p-site-nav {
+    //lost-column: 1/2 2 0px;
+    //padding: 1.5rem 0 0;
+    display: table-cell;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    text-transform: capitalize;
+
+    // Desktop
+    @include breakpoint($medium) {
+        //padding: 3.1rem 0 0;
+    }
+
+}
+
+// Link
+.page_item {
+    display: inline-block;
+    text-transform: capitalize;
+    margin-left: $spacing--small;
+    @include set-font-size(1.4rem, 1.6rem, 1.8rem);
+
+    a {
+        color: $dark-grey;
+    }
+
+}

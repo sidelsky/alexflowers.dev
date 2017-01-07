@@ -941,6 +941,10 @@ a {
   text-align: center;
   text-transform: uppercase;
   z-index: 0;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  display: block;
 }
 
 .c-hero__video {

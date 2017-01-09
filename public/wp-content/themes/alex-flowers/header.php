@@ -13,7 +13,7 @@
 		<?php wp_head(); ?>
 	</head>
 
-	<body <?php body_class(); ?>>
+	<body <?php body_class(); ?> id="top">
 		<?php
 			//Include SVG Sprite
 			include('assets/build/svg-sprite.svg');

@@ -2,8 +2,8 @@
     //top: 111px;
     background-color: $black;
     height: calc(100vh - 111px);
-    position: relative;
     overflow: hidden;
+    position: relative;
 
     &::after {
         @include vertical-align(absolute);
@@ -24,15 +24,21 @@
         text-align: center;
     }
 
+    // title
+    &__title {
+        color: $white;
+    }
+
     // Down chevron icon
     &__icon {
-        font-size: 6rem;
+        font-size: 4rem;
         fill: $white;
     }
 
     // Link
     &__link {
         display: inline-block;
+        mix-blend-mode: difference;
 
         &::before {
             color: $white;
@@ -49,16 +55,15 @@
 
     }
 
-
-// Video
-  &__video {
-    height: calc(100vh - 111px);
-    left: 0px;
-    object-fit: cover;
-    position: absolute; /* Change position to absolute if you don't want it to take up the whole page */
-    top: 0px;
-    width: 100vw; /* Could also use width: 100%; */
-    z-index: 1;
-  }
+    // Video
+      &__video {
+        height: calc(100vh - 111px);
+        left: 0px;
+        object-fit: cover;
+        position: absolute; /* Change position to absolute if you don't want it to take up the whole page */
+        top: 0px;
+        width: 100vw; /* Could also use width: 100%; */
+        z-index: 1;
+      }
 
 }

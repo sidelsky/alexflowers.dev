@@ -37,23 +37,16 @@
 }
 
 //Keep the aspect ratio fixed for certain elements. i.e. Video
+//Maintain Aspect Ratio Mixin
 @mixin aspect-ratio($width, $height) {
-	position: relative;
-
-	&::before {
-		content: '';
-		display: block;
-		padding-top: ($height / $width) * 100%;
-		width: 100%;
-	}
-
-	> &__canvas {
-		bottom: 0;
-		left: 0;
-		position: absolute;
-		right: 0;
-		top: 0;
-	}
+  position: relative;
+  &:before {
+    display: block;
+    content: '';
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+		z-index: 0;
+  }
 }
 
 //Return retina sprite

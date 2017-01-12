@@ -11,15 +11,18 @@
  */
 
 
-// ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define('DB_NAME', '');
-/** MySQL database username */
-define('DB_USER', '');
-/** MySQL database password */
-define('DB_PASSWORD', '');
-/** MySQL hostname */
-define('DB_HOST', '');
+ // ** MySQL settings - You can get this info from your web host ** //
+ /** The name of the database for WordPress */
+ define('DB_NAME', 'cl17-a-wordp-qk1');
+
+ /** MySQL database username */
+ define('DB_USER', 'cl17-a-wordp-qk1');
+
+ /** MySQL database password */
+ define('DB_PASSWORD', 'FkwCe.7mq');
+
+ /** MySQL hostname */
+ define('DB_HOST', 'localhost');
 
 /**
  * For developers: WordPress debugging mode.

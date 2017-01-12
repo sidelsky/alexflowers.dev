@@ -19,6 +19,7 @@
 			include('assets/build/svg-sprite.svg');
 		?>
 
+
 		<div class="page-wrap">
 
 			<header class="page-header">
@@ -61,3 +62,7 @@
               		)); ?>
 
 			</header>
+
+<?php
+	include("Mobile_Detect.php");
+?>

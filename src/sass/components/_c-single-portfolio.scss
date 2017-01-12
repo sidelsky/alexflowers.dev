@@ -1,0 +1,21 @@
+.c-single-portfolio {
+    height: 100vh;
+    background-color: $black;
+
+    // Video container
+    &__video-container {
+        @include vertical-align();
+        text-align: center;
+    }
+
+    // Video
+    &__video {
+        width: 100vw;
+        height: auto;
+        //@include aspect-ratio(3, 2);
+        @include breakpoint($medium){
+            width: 80vw;
+        }
+    }
+
+}

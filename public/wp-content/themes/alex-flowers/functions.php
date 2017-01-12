@@ -1,4 +1,16 @@
 <?php
+
+//http://79.170.40.171/alexflowers.com/
+
+// update_option('siteurl','http://alexflowers.dev/');
+// update_option('home','http://alexflowers.dev/');
+
+// update_option('siteurl','http://79.170.40.171/alexflowers.com/');
+// update_option('home','http://79.170.40.171/alexflowers.com/');
+
+
+
+
   //Wordpress reset (removes redundant scripts)
   require('functions/reset.php');
 

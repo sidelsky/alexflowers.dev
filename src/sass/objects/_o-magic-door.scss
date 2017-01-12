@@ -1,4 +1,14 @@
-#door-frame {
+.door-frame {
     overflow: hidden;
     height: 0;
+
+    // position: absolute;
+    // top: 0;
+    // width: 100%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
 }

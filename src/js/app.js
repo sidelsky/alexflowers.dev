@@ -10,18 +10,24 @@ var $ = require('jquery');
 //EXAMPLE
 //require('./sample');
 
+
+//Require our modules
 /*------------------------------------*\
-	Video thumbnail hover
+	portfolio
 \*------------------------------------*/
-var $thumbnail = $('[data-portfolio]');
-if ($thumbnail.length) {
-    var Thumbnail = require('./thumb-video-hover');
-    $thumbnail.each(function(i, elem) {
-      new Thumbnail($(elem));
-    });
-}
+var $portfolio = $('[data-portfolio]');
+
+    if ($portfolio.length) {
+        var Portfolio = require('./magic-door');
+        $portfolio.each(function(i, elem) {
+          new Portfolio($(elem));
+        });
+    }
 
 
 //require('./thumb-video-hover');
+
+
+require('./scroll-to');
 
 //TO GET THEME PATH use site_data.themePath

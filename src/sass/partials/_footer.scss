@@ -2,4 +2,25 @@
 	background-color: $dark-grey;
     color: $white;
     padding: $spacing--medium;
+    @include clearfix;
+
+    &__column {
+        lost-column: 1/2 0 0px;
+
+        &--right {
+            text-align: right;
+        }
+
+    }
+
+    &__link {
+        display: inline-block;
+        font-size: 2rem;
+        padding: 0 $spacing--tiny / (2);
+    }
+
+    &__icon {
+
+    }
+
 }

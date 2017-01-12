@@ -1,0 +1,95 @@
+.c-content {
+    //padding-top: $spacing--large * 2;
+
+    &__wrap {
+        @include clearfix;
+        padding: $spacing--large * (2) 0;
+
+        &--blockquote-elem {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            color: $white;
+            position: relative;
+            min-height: 650px;
+
+            //Desktop
+            @include breakpoint($small) {
+                min-height: 650px;
+            }
+
+        }
+
+        &--grey {
+            background-color: lighten($grey, 35%);
+        }
+
+    }
+
+    &__inner {
+        margin: 0 auto;
+        max-width: 80%;
+    }
+
+    &__icon {
+        font-size: 8rem;
+        position: relative;
+        margin-bottom: $spacing--large;
+        padding-bottom: $spacing--large;
+        border-bottom: solid 2px $white;
+    }
+
+    &__title {
+        display: block;
+        padding-bottom: $spacing--large;
+
+        &::after {
+            content: '';
+            display: block;
+            height: 2px;
+            background-color: currentColor;
+            width: 80px;
+            margin-top: $spacing--large;
+        }
+
+    }
+
+    &__column {
+
+        //Desktop
+        @include breakpoint($medium) {
+            lost-column: 1/2 0 20px;
+        }
+
+        p {
+            margin-bottom: $spacing--small;
+        }
+
+    }
+
+    &__blockquote {}
+
+    &__cite {
+        p {
+            @include set-font-size(1.2rem, 1.4rem, 1.6rem);
+        }
+    }
+
+}
+
+
+// Blockquote elem
+.c-content__wrap--blockquote-elem {
+    .c-content__column {
+        bottom: 0;
+        padding: $spacing--small;
+        position: absolute;
+
+        // Desktop
+        @include breakpoint($small) {
+            right: $spacing--medium;
+            padding: $spacing--large;
+        }
+
+    }
+}

@@ -24,21 +24,17 @@
  *   case 'localhost':
  *
  */
+
 switch ($hostname) {
-
-    // Staging
-    case 'staging.mathevies.com':
-        define('WP_ENV', 'staging');
-        break;
-
-    // Production
-   	case 'mathevies.com':
-        define('WP_ENV', 'production');
-        break;
-
-    // Development
-    case 'mathevies.dev':
-    default:
+    case 'alexflowers.dev':
         define('WP_ENV', 'development');
-        
+        break;
+
+    // case 'staging.alexflowers.dev':
+    //     define('WP_ENV', 'staging');
+    //     break;
+
+    case 'http://79.170.40.171/alexflowers.com/':
+    default:
+        define('WP_ENV', 'production');
 }

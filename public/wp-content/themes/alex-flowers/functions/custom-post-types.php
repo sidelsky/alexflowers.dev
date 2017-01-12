@@ -37,8 +37,8 @@
 				'menu_icon' =>  $menuIcon,
 				'supports' => array(
 					'title',
-					'editor',
-					'excerpt',
+					//'editor',
+					//'excerpt',
 					'thumbnail'
 				),
 				'taxonomies' => array(),

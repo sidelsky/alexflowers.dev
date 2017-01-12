@@ -1,28 +1,68 @@
+.primary {
+    text-align: right;
+    display: table-cell;
+    vertical-align: bottom;
+}
+
 .p-site-nav {
     //lost-column: 1/2 2 0px;
     //padding: 1.5rem 0 0;
-    display: table-cell;
     margin: 0;
-    padding: 0;
-    text-align: right;
-    text-transform: capitalize;
-
-    // Desktop
-    @include breakpoint($medium) {
-        //padding: 3.1rem 0 0;
-    }
 
 }
 
 // Link
-.page_item {
+.menu-item {
     display: inline-block;
     text-transform: capitalize;
-    margin-left: $spacing--small;
-    @include set-font-size(1.4rem, 1.6rem, 1.8rem);
+    margin-left: $spacing--tiny;
+    @include set-font-size(1.2rem, 1.4rem, 1.6rem);
+
+    @include breakpoint($medium) {
+        margin-left: $spacing--small;
+    }
 
     a {
         color: $dark-grey;
+        display: block;
+        position: relative;
+        overflow: hidden;
+
+        &::after {
+            content: '';
+            display: block;
+            height: 2px;
+            width: 100%;
+            background-color: $black;
+            position: absolute;
+            bottom: -5px;
+            transition: all ease .3s;
+        }
+
+        &:hover {
+
+            &::after {
+                content: '';
+                bottom: 0px;
+            }
+
+        }
+
+    }
+
+}
+
+
+.current_page_item {
+
+    a {
+        color: $black;
+
+        &::after {
+            content: '';
+            bottom: 0px;
+        }
+
     }
 
 }

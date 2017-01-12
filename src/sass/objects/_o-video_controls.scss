@@ -1,0 +1,42 @@
+.o-video_controls {
+    padding-top: $spacing--tiny;
+
+    &__button {
+        background: none;
+        border: none;
+        color: $white;
+        display: inline-block;
+        font-size: 1.5em;
+        padding-top: 5px;
+
+        &:hover {
+            background-color: rgba($white, .3);
+            cursor: pointer;
+        }
+
+        &:active {
+            outline: none;
+            background-color: rgba($white, .6);
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+    }
+
+}
+
+.close {
+    position: absolute;
+    top: $spacing--large;
+    right: $spacing--large;
+}
+
+.play {}
+
+.pause {}
+
+.volume-up {}
+
+.volume-down {}

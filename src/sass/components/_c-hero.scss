@@ -1,7 +1,7 @@
 .c-hero {
     //top: 111px;
     background-color: $black;
-    height: calc(100vh - 111px);
+    height: calc(100vh - 70px);
     overflow: hidden;
     position: relative;
 
@@ -33,6 +33,7 @@
     &__icon {
         font-size: 4rem;
         fill: $white;
+        transition: all .3s ease-in-out;
     }
 
     // Link
@@ -51,13 +52,23 @@
             margin: 0 auto;
             position: relative;
             display: block;
+            transition: all .3s ease-in-out;
+        }
+
+        &:hover {
+
+            .c-hero__icon {
+                transition: all .3s ease-in-out;
+                transform: translateY(7px) scale(.9);
+            }
+
         }
 
     }
 
     // Video
       &__video {
-        height: calc(100vh - 111px);
+        height: calc(100vh - 70px);
         left: 0px;
         object-fit: cover;
         position: absolute; /* Change position to absolute if you don't want it to take up the whole page */

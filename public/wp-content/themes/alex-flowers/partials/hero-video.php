@@ -1,4 +1,9 @@
-<div class="c-hero">
+<!-- START: Magic door -->
+<?php include('magic-door.php'); ?>
+<!-- END: Magic door -->
+
+
+<div class="c-hero" data-hero id="hero">
 
     <div class="c-hero__action">
 
@@ -11,20 +16,33 @@
 
         <?php endif; ?>
 
-        <a href="#" class="c-hero__link">
+        <a href="#" class="c-hero__link" data-scroll-to>
             <svg class="icon c-hero__icon">
                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#shape-down-chevron" viewBox="0 0 32 32"></use>
             </svg>
         </a>
+
     </div>
 
-    <video autoplay loop class="c-hero__video" zcontrols muted>
-        <?php
-            $video = get_field('video');
-            if($video) :
-        ?>
-            <source src="<?php echo $video; ?>" type="video/mp4">
-        <?php endif;?>
+    <div class="c-jacket" data-jacket style="background-image: url('<?php the_post_thumbnail_url( "large" ); ?>')"></div>
 
-    </video>
+    <?php
+    // Check if is mobile
+    $detect = new Mobile_Detect();
+
+    if ($detect->isMobile()) : ?>
+
+    <?php else : ?>
+
+        <video autoplay loop class="c-hero__video video" zcontrols muted data-hero-video id="hero-video" >
+            <?php
+                $video = get_field('video');
+                if($video) :
+            ?>
+                <source src="<?php echo $video; ?>" type="video/mp4">
+            <?php endif;?>
+        </video>
+
+    <?php endif; ?>
+
 </div>

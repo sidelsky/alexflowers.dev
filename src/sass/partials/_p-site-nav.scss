@@ -39,14 +39,26 @@
             transition: all ease .3s;
         }
 
-        &:hover {
+    }
 
+    &:hover {
+
+        a {
             &::after {
                 content: '';
                 bottom: 0px;
             }
-
         }
+
+        // ~.current-menu-item,
+        // >.current-menu-item{
+        //     a {
+        //         &::after {
+        //             content: '';
+        //             bottom: -5px;
+        //         }
+        //     }
+        // }
 
     }
 

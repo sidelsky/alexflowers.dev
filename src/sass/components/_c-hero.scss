@@ -27,6 +27,7 @@
     // title
     &__title {
         color: $white;
+        margin-bottom: $spacing--large;
     }
 
     // Down chevron icon
@@ -46,7 +47,8 @@
             content: 'See more';
             letter-spacing: 1px;
             text-align: center;
-            text-transform: uppercase;
+            text-transform: capitalize;
+            @include set-font-size(1.4rem, 1.6rem, 1.8rem);
             z-index: 0;
             width: 100%;
             margin: 0 auto;

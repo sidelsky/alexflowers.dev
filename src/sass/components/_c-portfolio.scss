@@ -35,12 +35,13 @@
 
     // Title
     &__title {
-        @include set-font-size(1.2rem, 1.4rem, 1.6rem);
+        @include set-font-size(1.4rem, 1.6rem, 1.8rem);
         bottom: $spacing--small;
         color: $white;
         margin: 0;
         position: relative;
         z-index: 100;
+        letter-spacing: 1px;
     }
 
     // Video

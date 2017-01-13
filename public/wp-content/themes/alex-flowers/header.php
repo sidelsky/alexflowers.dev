@@ -27,7 +27,7 @@
 				<?php if (is_front_page()): ?>
 
 					<h1 class="page-header__logo">
-						<a href="<?php echo home_url(); ?>">
+						<a href="<?php echo home_url(); ?>/">
 							<?php bloginfo('name'); ?>
 						</a>
 					</h1>
@@ -35,7 +35,7 @@
 				<?php else: ?>
 
 					<div class="page-header__logo">
-						<a href="<?php echo home_url(); ?>">
+						<a href="<?php echo home_url(); ?>/">
 							<?php bloginfo('name'); ?>
 						</a>
 					</div>

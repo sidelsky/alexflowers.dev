@@ -14,6 +14,11 @@
     <div id="portfolio-<?php the_ID(); ?>" class="c-portfolio__item visible" data-portfolio-item >
         <a href="<?php the_permalink(); ?>" rel="<?php the_ID(); ?>" class="c-portfolio__link" data-post-link >
 
+
+            <?php
+            // Spinloader
+            include('spinloader.php'); ?>
+
             <?php the_title('<h2 class="c-portfolio__title">','</h2>'); ?>
 
             <div class="c-jacket" data-jacket style="background-image: url('<?php the_post_thumbnail_url( "medium" ); ?>')"></div>

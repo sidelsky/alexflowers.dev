@@ -9947,7 +9947,7 @@ var Portfolio = function Portfolio($elem) {
     this.url = $(this.$magicDoor).attr('data-url');
     this.$doc = $('html, body');
 
-    this.speed = 700;
+    this.speed = 500;
     this.dontGet = false;
 
     this._attachHandlers();
@@ -10059,6 +10059,8 @@ Portfolio.prototype._getPortfolio = function($elem, $item) {
         //$spinloader.fadeIn(200);
         $spinloader.addClass(cssClasses.isVisible);
 
+        console.log($spinloader);
+
         setTimeout(function(){
 
             _this._closeDoor();
@@ -10067,7 +10069,7 @@ Portfolio.prototype._getPortfolio = function($elem, $item) {
             _this.$magicDoor.load(_this.url, {
                 id: postId
             }, _this._loadCallBack);
-        }, 500);
+        }, _this.speed );
 
     }
 
@@ -10080,7 +10082,7 @@ Portfolio.prototype._loadCallBack = function($elem) {
     // scrollTop
     _this.$doc.animate({
         scrollTop: 0
-    }, this.speed, _this._easeInOutQuart(), function() {
+    }, _this.speed, _this._easeInOutQuart(), function() {
 
         // Portfolio init
         _this._portfolioInit();
@@ -10092,7 +10094,7 @@ Portfolio.prototype._loadCallBack = function($elem) {
         setTimeout(function() {
             // Open the door
             _this._openDoor();
-        }, 500);
+        }, _this.speed);
 
     });
 
@@ -10114,7 +10116,7 @@ Portfolio.prototype._closeDoor = function($elem) {
 
         _this.$doorFrame.stop(true).animate({
             height: 0
-        }, 400, _this._easeInOutQuart(), function() {
+        }, _this.speed, _this._easeInOutQuart(), function() {
             // Add class to parent
             _this.$elem.removeClass(cssClasses.isOpen);
         });
@@ -10131,7 +10133,7 @@ Portfolio.prototype._openDoor = function($elem) {
 
     _this.$doorFrame.stop(true).animate({
         height: _this.$magicDoor.outerHeight()
-    }, this.speed, _this._easeInOutQuart(), function() {
+    }, _this.speed, _this._easeInOutQuart(), function() {
 
         // Add class to parent
         _this.$elem.addClass(cssClasses.isOpen);
@@ -10182,13 +10184,13 @@ Portfolio.prototype._portfolioInit = function() {
         $fullVideo.get(0).pause();
 
 
-        $portfolioItems = $('[data-portfolio]'),
-        speed = 700;
+        $portfolioItems = $('[data-portfolio]');
+        //speed = 700;
 
         setTimeout(function(){
             $('html, body').animate({
                 scrollTop: $portfolioItems.offset().top
-            }, speed, 'easeInOutQuart');
+            }, _this.speed, 'easeInOutQuart');
         }, 250);
 
     });

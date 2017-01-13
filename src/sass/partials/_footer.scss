@@ -5,17 +5,36 @@
     @include clearfix;
 
     &__column {
-        lost-column: 1/2 0 0px;
+
+        p {
+            @include set-font-size(1.2rem, 1.4rem, 1.6rem);
+            line-height: 1.6;
+
+            span {
+                @include set-font-size(1.0rem, 1.2rem, 1.4rem);
+
+                a {
+                    text-decoration: none;
+                }
+
+            }
+
+        }
+
+		@include breakpoint($small) {
+			lost-column: 1/2 0 0px;
+		}
 
         &--right {
             text-align: right;
+            padding-top: 14px;
         }
 
     }
 
     &__link {
         display: inline-block;
-        font-size: 2rem;
+        font-size: 2.2rem;
         padding: 0 $spacing--tiny / (2);
     }
 

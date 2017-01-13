@@ -2,7 +2,7 @@
 
 				<div class="page-footer__column">
 					<p class="page-footer__copyright">
-						&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>
+						&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?><br><span>Site by <a href="http://www.carbon8.london/" target="_blank">Carbon8</a></span>
 					</p>
 				</div>
 
@@ -18,7 +18,7 @@
     							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#shape-vimeo" viewBox="0 0 32 32"></use>
     						</svg>
     					</a>
-    					<a href="#" target="_blank" class="page-footer__link">
+    					<a href="https://twitter.com/alexflowers" target="_blank" class="page-footer__link">
     						<svg class="icon page_footer__icon">
     							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#shape-twitter" viewBox="0 0 32 32"></use>
     						</svg>

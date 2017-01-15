@@ -14,7 +14,6 @@
     <div id="portfolio-<?php the_ID(); ?>" class="c-portfolio__item visible" data-portfolio-item >
         <a href="<?php the_permalink(); ?>" rel="<?php the_ID(); ?>" class="c-portfolio__link" data-post-link >
 
-
             <?php
             // Spinloader
             include('spinloader.php'); ?>

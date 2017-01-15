@@ -1213,12 +1213,6 @@ a {
   background-position: center center;
 }
 
-@media (min-width: 768px) {
-  .c-jacket {
-    display: none;
-  }
-}
-
 .video {
   display: none;
   visibility: hidden;
@@ -1355,8 +1349,8 @@ a {
   position: absolute;
   right: 0;
   top: 0;
-  z-index: 1;
-  opacity: .8;
+  z-index: 2;
+  opacity: 0.8;
   background-color: #000;
 }
 
@@ -1416,8 +1410,8 @@ a {
 }
 
 @keyframes color {
-  100%,
-  0% {
+  0%,
+  100% {
     stroke: #fff;
   }
   40% {

@@ -17,6 +17,9 @@
 		<?php
 			//Include SVG Sprite
 			include('assets/build/svg-sprite.svg');
+
+			// Mobile overlay menu
+            include('partials/mobile-navigation.php');
 		?>
 
 
@@ -41,25 +44,32 @@
 					</div>
 
 				<?php endif; ?>
-
-                    <?php wp_nav_menu( array(
-              		'menu'            => 'Primary navigation',
-              		'container'       => 'nav',
-              		'container_class' => 'primary',
-              		//'container_id'    => 'menuContainer',
-              		//'menu_id'         => 'menu',
-              		//'theme_location'  => 'Primary Menu',
-              		'menu_class'      => 'p-site-nav',
-              		//'echo'            => true,
-              		//'fallback_cb'     => 'wp_page_menu',
-              		//'before'          => ,
-              		//'after'           => ,
-              		//'link_before'     => ,
-              		//'link_after'      => ,
-              		//'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-              		//'depth'           => 0,
-              		//'walker'          =>
-              		)); ?>
+                <!-- START: Mobile menu icon -->
+                    <div class="c-hamburger c-hamburger--htx" data-hamburger-menu>
+                        <span></span>
+                    </div>
+                <!-- START: Mobile menu icon -->
+                    <?php
+                            // Primary navigation
+                            wp_nav_menu( array(
+                                'menu'            => 'Primary navigation',
+                                'container'       => 'nav',
+                                'container_class' => 'primary-site-nav',
+                                //'container_id'    => 'menuContainer',
+                                //'menu_id'         => 'menu',
+                                'theme_location'  => 'Primary Menu',
+                                'menu_class'      => 'primary-site-nav__menu',
+                                //'echo'            => true,
+                                //'fallback_cb'     => 'wp_page_menu',
+                                //'before'          => ,
+                                //'after'           => ,
+                                //'link_before'     => ,
+                                //'link_after'      => ,
+                                //'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                                //'depth'           => 0,
+                                //'walker'          =>
+                            ));
+                        ?>
 
 			</header>
 

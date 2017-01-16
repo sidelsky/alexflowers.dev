@@ -4,6 +4,8 @@
 	text-transform: lowercase;
     @include clearfix;
     display: table;
+    position: relative;
+    z-index: 10;
     width: 100%;
     box-shadow: 0 4px 6px -6px rgba($black, .8);
 
@@ -13,14 +15,19 @@
 
     &__logo {
         //lost-column: 1/2 2 0px;
-        @include set-font-size(1.8rem, 2rem, 2.4rem);
+        @include set-font-size(2rem, 2rem, 2.4rem);
         display: table-cell;
         margin: 0;
         padding: 0;
+        position: relative;
+
+		@include breakpoint($small) {
+			top: -2px;
+		}
 
         a {
             color: $black;
-            display: block;
+            //display: block;
         }
 
     }

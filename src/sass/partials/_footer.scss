@@ -7,11 +7,11 @@
     &__column {
 
         p {
-            @include set-font-size(1.2rem, 1.4rem, 1.6rem);
+            @include set-font-size(1.2rem, 1.2rem, 1.4rem);
             line-height: 1.6;
 
             span {
-                @include set-font-size(1.0rem, 1.2rem, 1.4rem);
+                //@include set-font-size(1.0rem, 1.2rem, 1.4rem);
 
                 a {
                     text-decoration: none;
@@ -27,7 +27,7 @@
 
         &--right {
             text-align: right;
-            padding-top: 14px;
+            padding-top: 10px;
         }
 
     }

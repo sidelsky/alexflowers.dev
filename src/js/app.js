@@ -27,7 +27,8 @@ var $portfolio = $('[data-portfolio]');
 
 //require('./thumb-video-hover');
 
-
 require('./scroll-to');
+
+require('./mobile-navigation');
 
 //TO GET THEME PATH use site_data.themePath

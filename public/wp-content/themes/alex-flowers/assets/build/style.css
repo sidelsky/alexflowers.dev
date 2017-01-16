@@ -60,19 +60,25 @@ table {
 
 /* -----------------------------------------------------------------------------
 
-  HAMBURGER ICONS COMPONENT
+HAMBURGER ICONS COMPONENT
 
 ----------------------------------------------------------------------------- */
 /**
- * Toggle Switch Globals
- *
- * All switches should take on the class `c-hamburger` as well as their
- * variant that will give them unique properties. This class is an overview
- * class that acts as a reset for all versions of the icon.
- */
+* Toggle Switch Globals
+*
+* All switches should take on the class `c-hamburger` as well as their
+* variant that will give them unique properties. This class is an overview
+* class that acts as a reset for all versions of the icon.
+*/
+.js-is-active .c-hamburger {
+  top: 15px;
+}
+
 .c-hamburger {
+  right: 13px;
   display: block;
-  position: relative;
+  position: absolute;
+  top: 13px;
   overflow: hidden;
   margin: 0;
   padding: 0;
@@ -91,7 +97,7 @@ table {
 }
 
 .c-hamburger span {
-  background: white;
+  background: #000;
   display: block;
   position: absolute;
   top: 8px;
@@ -104,14 +110,14 @@ table {
   outline: none;
 }
 
-.c-hamburger span::before,
-.c-hamburger span::after {
+.c-hamburger span::after,
+.c-hamburger span::before {
   position: absolute;
   display: block;
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: #fff;
+  background-color: #000;
   content: '';
 }
 
@@ -124,11 +130,11 @@ table {
 }
 
 /**
- * Style 1
- *
- * Rotating hamburger icon (rot), that simply rotates 90 degrees when activated.
- * Nothing too fancy, simple transition.
- */
+* Style 1
+*
+* Rotating hamburger icon (rot), that simply rotates 90 degrees when activated.
+* Nothing too fancy, simple transition.
+*/
 .c-hamburger--rot {
   background-color: #28aadc;
 }
@@ -147,23 +153,18 @@ table {
 }
 
 /**
- * Style 2
- *
- * Hamburger to 'x' (htx). Takes on a hamburger shape, bars slide
- * down to center and transform into an 'x'.
- */
+* Style 2
+*
+* Hamburger to 'x' (htx). Takes on a hamburger shape, bars slide
+* down to center and transform into an 'x'.
+*/
 .c-hamburger--htx {
-  background-color: #ff3264;
+  background-color: transparent;
 }
 
-.c-hamburger--htx span {
-  transition: background 0s 0.3s;
-}
-
-.c-hamburger--htx span::before,
-.c-hamburger--htx span::after {
+.c-hamburger--htx span::after,
+.c-hamburger--htx span::before {
   transition-duration: 0.3s, 0.3s;
-  transition-delay: 0.3s, 0s;
 }
 
 .c-hamburger--htx span::before {
@@ -176,7 +177,7 @@ table {
 
 /* active state, i.e. menu open */
 .c-hamburger--htx.is-active {
-  background-color: #cb0032;
+  background-color: transparent;
 }
 
 .c-hamburger--htx.is-active span {
@@ -193,18 +194,18 @@ table {
   transform: rotate(-45deg);
 }
 
-.c-hamburger--htx.is-active span::before,
-.c-hamburger--htx.is-active span::after {
+.c-hamburger--htx.is-active span::after,
+.c-hamburger--htx.is-active span::before {
   transition-delay: 0s, 0.3s;
 }
 
 /**
- * Style 3
- *
- * Hamburger to left-arrow (htla). Hamburger menu transforms to a left-pointing
- * arrow. Usually indicates an off canvas menu sliding in from left that
- * will be close on re-click of the icon.
- */
+* Style 3
+*
+* Hamburger to left-arrow (htla). Hamburger menu transforms to a left-pointing
+* arrow. Usually indicates an off canvas menu sliding in from left that
+* will be close on re-click of the icon.
+*/
 .c-hamburger--htla {
   background-color: #32dc64;
 }
@@ -232,8 +233,8 @@ table {
   transform: rotate(180deg);
 }
 
-.c-hamburger--htla.is-active span::before,
-.c-hamburger--htla.is-active span::after {
+.c-hamburger--htla.is-active span::after,
+.c-hamburger--htla.is-active span::before {
   width: 50%;
 }
 
@@ -248,12 +249,12 @@ table {
 }
 
 /**
- * Style 4
- *
- * Hamburger to right-arrow (htra). Hamburger menu transforms to a
- * right-pointing arrow. Usually indicates an off canvas menu sliding in from
- * right that will be close on re-click of the icon.
- */
+* Style 4
+*
+* Hamburger to right-arrow (htra). Hamburger menu transforms to a
+* right-pointing arrow. Usually indicates an off canvas menu sliding in from
+* right that will be close on re-click of the icon.
+*/
 .c-hamburger--htra {
   background-color: #ff9650;
 }
@@ -281,8 +282,8 @@ table {
   transform: rotate(180deg);
 }
 
-.c-hamburger--htra.is-active span::before,
-.c-hamburger--htra.is-active span::after {
+.c-hamburger--htra.is-active span::after,
+.c-hamburger--htra.is-active span::before {
   width: 50%;
 }
 
@@ -294,6 +295,30 @@ table {
 .c-hamburger--htra.is-active span::after {
   bottom: 0;
   transform: translateX(-2px) translateY(-1px) rotate(45deg);
+}
+
+.is-front-page .c-hamburger span {
+  background-color: #000;
+}
+
+.is-front-page .c-hamburger span::before, .is-front-page .c-hamburger span::after {
+  background-color: #000;
+}
+
+.is-front-page .c-hamburger.is-active span {
+  background: none;
+}
+
+.is-front-page .js-is-active .c-hamburger span {
+  background-color: #000;
+}
+
+.is-front-page .js-is-active .c-hamburger span::before, .is-front-page .js-is-active .c-hamburger span::after {
+  background-color: #000;
+}
+
+.is-front-page .js-is-active .c-hamburger.is-active span {
+  background: none;
 }
 
 .button, input[type='submit'] {
@@ -841,6 +866,8 @@ a {
   padding: 1rem;
   text-transform: lowercase;
   display: table;
+  position: relative;
+  z-index: 10;
   width: 100%;
   box-shadow: 0 4px 6px -6px rgba(0, 0, 0, 0.8);
 }
@@ -858,10 +885,11 @@ a {
 }
 
 .page-header__logo {
-  font-size: 1.8rem;
+  font-size: 2rem;
   display: table-cell;
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 @media (min-width: 1024px) {
@@ -876,9 +904,14 @@ a {
   }
 }
 
+@media (min-width: 540px) {
+  .page-header__logo {
+    top: -2px;
+  }
+}
+
 .page-header__logo a {
   color: #000;
-  display: block;
 }
 
 .page-footer {
@@ -900,28 +933,12 @@ a {
 
 @media (min-width: 1024px) {
   .page-footer__column p {
-    font-size: 1.4rem;
-  }
-}
-
-@media (min-width: 1280px) {
-  .page-footer__column p {
-    font-size: 1.6rem;
-  }
-}
-
-.page-footer__column p span {
-  font-size: 1rem;
-}
-
-@media (min-width: 1024px) {
-  .page-footer__column p span {
     font-size: 1.2rem;
   }
 }
 
 @media (min-width: 1280px) {
-  .page-footer__column p span {
+  .page-footer__column p {
     font-size: 1.4rem;
   }
 }
@@ -938,7 +955,7 @@ a {
 
 .page-footer__column--right {
   text-align: right;
-  padding-top: 14px;
+  padding-top: 10px;
 }
 
 .page-footer__link {
@@ -947,13 +964,13 @@ a {
   padding: 0 0.5rem;
 }
 
-.primary {
+.primary-site-nav {
   text-align: right;
   display: table-cell;
   vertical-align: bottom;
 }
 
-.p-site-nav {
+.primary-site-nav__menu {
   margin: 0;
 }
 
@@ -961,7 +978,7 @@ a {
   display: inline-block;
   text-transform: capitalize;
   margin-left: 1rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 @media (min-width: 1024px) {
@@ -983,7 +1000,7 @@ a {
 }
 
 .menu-item a {
-  color: #2c2a2a;
+  color: #7a7575;
   display: block;
   position: relative;
   overflow: hidden;
@@ -1000,9 +1017,8 @@ a {
   transition: all ease .3s;
 }
 
-.menu-item:hover a::after {
-  content: '';
-  bottom: 0px;
+.menu-item:hover a {
+  color: #000;
 }
 
 .current_page_item a {
@@ -1012,6 +1028,88 @@ a {
 .current_page_item a::after {
   content: '';
   bottom: 0px;
+}
+
+@media (min-width: 540px) {
+  .c-hamburger {
+    display: none;
+  }
+}
+
+.primary-site-nav {
+  display: none;
+}
+
+@media (min-width: 540px) {
+  .primary-site-nav {
+    display: block;
+  }
+}
+
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  background-color: rgba(255, 255, 255, 0.95);
+  /* Black w/opacity */
+  height: 100%;
+  left: 0;
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  position: fixed;
+  /* Stay in place */
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  width: 0;
+  z-index: 5;
+  /* Sit on top */
+}
+
+.overlay__content {
+  margin-top: 30px;
+  /* 30px top margin to avoid conflict with the close button on smaller screens */
+  position: relative;
+  text-align: center;
+  /* Centered text/links */
+  top: 25%;
+  /* 25% from the top */
+  width: 100%;
+  /* 100% width */
+}
+
+body.js_active .overlay {
+  width: 100%;
+}
+
+.mobile-navigation .menu-item {
+  text-transform: uppercase;
+  display: block;
+  line-height: 2.4;
+  font-size: 2.1rem;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 1024px) {
+  .mobile-navigation .menu-item {
+    font-size: 2.1rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .mobile-navigation .menu-item {
+    font-size: 2.1rem;
+  }
+}
+
+.mobile-navigation .menu-item a {
+  display: inline-block;
+}
+
+.mobile-navigation .current-menu-item a {
+  font-weight: 700;
+}
+
+.mobile-navigation .current-menu-item a::after {
+  bottom: 0;
 }
 
 .c-hero {
@@ -1036,7 +1134,7 @@ a {
 
 .c-hero__action {
   position: absolute;
-  bottom: 3rem;
+  bottom: 6rem;
   z-index: 2;
   width: 100%;
   text-align: center;
@@ -1211,6 +1309,12 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+}
+
+@media (min-width: 768px) {
+  .c-jacket {
+    display: none;
+  }
 }
 
 .video {

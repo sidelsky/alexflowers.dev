@@ -12,27 +12,27 @@
         getWPContent();
 
         // Current post ID
-		$postId = $_POST['id'];
+				$postId = $_POST['id'];
+				
+				// Get Slug and pass to magic-door
+				$post = get_post($_POST['id']);
 
-		// Get Slug and pass to magic-door
-		$post = get_post($_POST['id']);
+				global $post;
+				$post_slug = $post->post_name;
 
-		global $post;
-		$post_slug = $post->post_name;
+				// Convert PHP variable into one that can be accessed in jQuery
+				echo '<script>';
+				echo 'var post_slug = ' . json_encode($post_slug) . ';';
+				echo '</script>';
 
-		// Convert PHP variable into one that can be accessed in jQuery
-		echo '<script>';
-		echo 'var post_slug = ' . json_encode($post_slug) . ';';
-		echo '</script>';
+			//Query the database
+	        $args = array(
+	            'post_type' => 'portfolio',
+	            'p' => $postId,
+	        );
+	        $loop = new WP_Query( $args );
 
-		//Query the database
-        $args = array(
-            'post_type' => 'portfolio',
-            'p' => $postId,
-        );
-        $loop = new WP_Query( $args );
-
-	}
+		}
 
     if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post();
 

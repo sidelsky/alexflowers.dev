@@ -9844,12 +9844,13 @@ var $portfolio = $('[data-portfolio]');
 
 //require('./thumb-video-hover');
 
-
 require('./scroll-to');
+
+require('./mobile-navigation');
 
 //TO GET THEME PATH use site_data.themePath
 
-},{"./magic-door":4,"./scroll-to":5,"jquery":1}],3:[function(require,module,exports){
+},{"./magic-door":4,"./mobile-navigation":5,"./scroll-to":6,"jquery":1}],3:[function(require,module,exports){
 /*------------------------------------*\
 	Site Config
 	All settings, configuration, event names, classes etc
@@ -10203,6 +10204,32 @@ Portfolio.prototype._portfolioInit = function() {
 module.exports = Portfolio;
 
 },{"./config":3}],5:[function(require,module,exports){
+var mobileNavigation = (function(){
+
+    "use strict";
+
+    var $hamburgerMenu,
+        $this,
+        $overlay,
+        $menuItem,
+        $body;
+
+        $hamburgerMenu = $('[data-hamburger-menu]');
+        $body = $('body');
+
+        function HamburgerMenuActive(el){
+            $this = $(this);
+            $this.toggleClass('is-active');
+            $body.toggleClass('js_active');
+            return false;
+
+        }
+
+        $hamburgerMenu.on('click', HamburgerMenuActive);
+
+}());
+
+},{}],6:[function(require,module,exports){
 /* global require */
 /* global window */
 /* global site_data */

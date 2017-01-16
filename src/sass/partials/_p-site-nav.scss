@@ -1,29 +1,31 @@
-.primary {
+.primary-site-nav {
     text-align: right;
     display: table-cell;
     vertical-align: bottom;
+
+    &__menu {
+        //lost-column: 1/2 2 0px;
+        //padding: 1.5rem 0 0;
+        margin: 0;
+    }
+
 }
 
-.p-site-nav {
-    //lost-column: 1/2 2 0px;
-    //padding: 1.5rem 0 0;
-    margin: 0;
 
-}
 
 // Link
 .menu-item {
     display: inline-block;
     text-transform: capitalize;
     margin-left: $spacing--tiny;
-    @include set-font-size(1.2rem, 1.4rem, 1.6rem);
+    @include set-font-size(1.4rem, 1.4rem, 1.6rem);
 
     @include breakpoint($medium) {
         margin-left: $spacing--small;
     }
 
     a {
-        color: $dark-grey;
+        color: lighten($dark-grey, 30%);
         display: block;
         position: relative;
         overflow: hidden;
@@ -44,10 +46,11 @@
     &:hover {
 
         a {
-            &::after {
-                content: '';
-                bottom: 0px;
-            }
+          color: $black;
+            // &::after {
+            //     content: '';
+            //     bottom: 0px;
+            // }
         }
 
         // ~.current-menu-item,
